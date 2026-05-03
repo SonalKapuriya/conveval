@@ -68,6 +68,14 @@ class EvalResponse(BaseModel):
 
 # ─── Routes ───────────────────────────────────────────────────────────────────
 
+@app.get("/")
+def root():
+    return {
+        "message": "Conveval API is live",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 @app.get("/health")
 def health():
     return {
