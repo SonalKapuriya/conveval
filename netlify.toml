@@ -1,6 +1,6 @@
 [build]
   base = "frontend"
-  command = "npm install && npm run build"
+  command = "npm ci && node ./node_modules/.bin/vite build"
   publish = "dist"
 
 [build.environment]
